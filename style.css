@@ -8,6 +8,10 @@
   --clr-dark: #28283d;
   --clr-white: #fafafa;
   --clr-gray: #87879d;
+
+  --fnt-primary: 'Red Hat Display', sans-serif;
+
+  --spacer: 3em;
 }
 
 /* Box sizing rules */
@@ -83,4 +87,61 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+body {
+  font-family: var(--fnt-primary);
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacer);
+}
+
+.section-number {
+  position: relative;
+  display: block;
+  font-weight: 900;
+  color: var(--clr-gray);
+  height: 56px;
+  width: 56px;
+  text-align: center;
+  line-height: 2;
+  margin: 0 auto;
+  margin-top: calc(var(--spacer) * 2);
+  border-radius: 50%;
+  padding: 0.75em;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+}
+
+.section-number::before {
+  content: '';
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  width: 1px;
+  height: 84px;
+  background-color: rgba(135, 135, 157, 0.25);
+}
+
+button {
+  display: block;
+  width: max-content;
+  --btn-bg-color: var(--clr-blue-green);
+  --btn-color: var(--clr-white);
+  border-radius: 29px;
+  padding: 1em 1.5em;
+  font-weight: 900;
+  border: none;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+}
+
+button.secondary {
+  --btn-bg-color: var(--clr-purple);
+}
+
+button span {
+  color: #8fe3f9;
 }
