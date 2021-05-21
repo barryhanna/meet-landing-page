@@ -111,7 +111,6 @@ body {
   text-align: center;
   line-height: 2;
   margin: 0 auto;
-  margin-top: calc(var(--spacer) * 2);
   border-radius: 50%;
   padding: 0.75em;
   border: 1px solid rgba(135, 135, 157, 0.25);
@@ -145,6 +144,7 @@ body {
 
 .hero-img {
   max-width: calc(100vw + 70px);
+  margin-top: 0;
   margin-left: -40px;
   margin-right: -40px;
 }
@@ -201,8 +201,8 @@ p:not([class]) {
   color: var(--clr-gray);
   line-height: 1.625;
   font-weight: 500;
-  /* padding-left: calc(var(--spacer) / 2);
-  padding-right: calc(var(--spacer) / 2); */
+  padding-left: calc(var(--spacer) / 2);
+  padding-right: calc(var(--spacer) / 2);
 }
 
 .images {
