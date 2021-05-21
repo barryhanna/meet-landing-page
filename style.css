@@ -12,7 +12,8 @@
   --fnt-primary: 'Red Hat Display', sans-serif;
 
   --spacer: 3em;
-  --measure: 30ch;
+  --measure: 40ch;
+  --header-measure: 15ch;
 }
 
 /* Box sizing rules */
@@ -199,10 +200,14 @@ button:active span {
 
 p:not([class]) {
   color: var(--clr-gray);
+  text-align: center;
   line-height: 1.625;
   font-weight: 500;
+  max-width: var(--measure);
   padding-left: calc(var(--spacer) / 2);
   padding-right: calc(var(--spacer) / 2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .images {
@@ -215,6 +220,11 @@ p:not([class]) {
 .images > img {
   width: 44%;
   border-radius: 15px;
+}
+h1,
+h2 {
+  max-width: var(--header-measure);
+  margin: 0 auto;
 }
 
 h1 {
@@ -246,7 +256,7 @@ section {
 
 footer {
   position: relative;
-  background: url(./assets/mobile/image-footer.jpg) rgba(77, 150, 169, 0.9);
+  background: url(./assets/mobile/image-footer-750w.jpg) rgba(77, 150, 169, 0.9);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -269,4 +279,39 @@ footer .section-number {
 footer h2,
 footer p:not([class]) {
   color: var(--clr-white);
+}
+
+@media (min-width: 400px) {
+  .images {
+    width: 100%;
+  }
+
+  .images > img {
+    width: 20%;
+  }
+
+  button {
+    display: inline-block;
+  }
+
+  button.secondary {
+    margin-left: calc(var(--spacer) / 2);
+  }
+
+  footer {
+    background: url(./assets/tablet/image-footer-768w.jpg)
+      rgba(77, 150, 169, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (min-width: 1000px) {
+  footer {
+    background: url(./assets/desktop/image-footer-1440w.jpg)
+      rgba(77, 150, 169, 0.9);
+    background-size: cover;
+    background-position: center center;
+  }
 }
